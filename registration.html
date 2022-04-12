@@ -1,0 +1,123 @@
+<html>   
+<head>  
+<title> Registration Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+       background-color: #aa7ab6;   
+       width: 100%;  
+        color: rgb(22, 11, 6);   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }       
+ .container {   
+        padding: 25px;   
+        background-color: rgb(177, 196, 233);  
+    }   
+</style>   
+</head>    
+<body>    
+    <center> <h1> Student Registration Form </h1> </center>   
+    <form name="myform">  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  <br><br>
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required> <br><br> 
+            <label>Confirm Password : </label>
+            <input type="password" placeholder="Confirm Password" name="confirm password" required> <br><br>
+            <label>Email-id : </label>
+            <input type="text" placeholder="Enter Email" name="email-id" required> <br><br>
+            <label>Mobile Number : </label>   
+            <input type="password" placeholder="Enter Mobile Number" name="mobile number" required> <br><br>
+            <label>Date of Birth : </label>   
+            <input type="password" placeholder="dd/mm/yyyy" name="DOB" required> <br><br>
+            <label>Address : </label>   
+            <input type="text" placeholder="Enter Address" name="address" required> <br><br>
+            <label>Gender : </label>   
+            <input type="text" placeholder="Male/Female/Others" name="gender" required> <br><br>
+            <button type="submit" onclick="validateform()">Submit</button>   <br><br> 
+            <center>Already have an account? <a href="login.html">Login</a> </center>
+        </div>   
+    </form>     
+</body>    
+<script>
+    function validateform(){
+        var n=document.forms["myform"]["username"].value;
+        var p=document.forms["myform"]["password"].value;
+        var cp=document.forms["myform"]["confirm password"].value;
+        var e=document.forms["myform"]["email-id"].value;
+        var m=document.forms["myform"]["mobile number"].value;
+        console.log(n,p);
+        if(n.length<6){
+            alert("Username must be atleast 6 characters long");
+            return false;
+        }
+        if(p.length<8){
+            alert("Password must be atleast 8 characters long");
+            return false;
+        }
+        var l1=/[A-Z]/;
+        if(!p.match(l1)){
+            alert("Password must contain atleast one upper case letter");
+            return false;
+        }
+        var l2=/[a-z]/;
+        if(!p.match(l2)){
+            alert("Password must contain atleast one lower case letter");
+            return false;
+        }
+        var l3=/[0-9]/;
+        if(!p.match(l3)){
+            alert("Password must contain atleast one digit");
+            return false;
+        }
+        var l4=/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+        if(!p.match(l4)){
+            alert("Password must contain atleast one special character");
+            return false;
+        }
+        if(p!=cp){
+            alert("Password confirmation failed");
+            return false;
+        }
+        var l5=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+[c,o,m])+$/;
+        if(!e.match(l5)){
+            alert("Invalid email format");
+            return false;
+        }
+        if(m.length!=10){
+            alert("Mobile number must be of 10 digits only");
+            return false;
+        }
+        var l6=/[6-9]/;
+        var c=m.charAt(0);
+        if(!c.match(l6)){
+            alert("Mobile number must start with any digit from 6-9");
+            return false;
+        }
+        else{
+            alert("Registration successful");
+        }
+    }
+</script>   
+</html>  
