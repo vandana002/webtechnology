@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="gvp.css"?>
+<!--?xml-stylesheet type="text/xsl" href="college.xsl"?-->
+
+<!--DOCTYPE college SYSTEM "gvp.dtd"-->
+<!--DOCTYPE college SYSTEM "gvp.xsd"-->
+
+<gvp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="gvp.xsd">
+<!--gvp-->
+
+<teaching clg="GVPCE">
+<name>Amuliya</name><id>101</id><dept>CSE</dept>
+</teaching>
+<teaching clg="MVGR">
+<name>Rahul</name><id>201</id><dept>CSE</dept>
+</teaching>
+<teaching clg="RAGHU">
+<name>Swetha</name><id>301</id><dept>CSE</dept>
+</teaching>
+<teaching clg="GITAM">
+<name>Sai</name><id>401</id><dept>CSE</dept>
+</teaching>
+
+<non_teaching clg="GVPCE">
+<name>Anand</name><id>102</id>
+</non_teaching>
+<non_teaching clg="MVGR">
+<name>Bhargavi</name><id>202</id>
+</non_teaching>
+<non_teaching clg="RAGHU">
+<name>Priya</name><id>302</id>
+</non_teaching>
+<non_teaching clg="GITAM">
+<name>Dhurv</name><id>402</id>
+</non_teaching>
+
+
+<student clg="GVPCE">
+<name>Naveen</name><rollno>10</rollno><dept>CSE</dept>
+</student>
+<student clg="MVGR">
+<name>Sindhu</name><rollno>20</rollno><dept>CSE</dept>
+</student>
+<student clg="RAGHU">
+<name>Praveena</name><rollno>30</rollno><dept>CSE</dept>
+</student>
+<student clg="GITAM">
+<name>Venkat</name><rollno>40</rollno><dept>CSE</dept>
+</student>
+</gvp>
