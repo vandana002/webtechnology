@@ -1,0 +1,27 @@
+gvp
+{
+ background-color: rgb(133, 153, 177);
+}
+teaching
+{
+ font-size: 50px;
+ display: inline-block;
+ color: #8d3513;
+ margin-left: 100px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+non_teaching{
+font-size: 50px;
+display: inline-flex;
+color:rgb(194, 43, 119);
+margin-left: 100px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+student{
+    font-size: 50px;
+    display: inline-flex;
+    color: black;
+    margin-left: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
