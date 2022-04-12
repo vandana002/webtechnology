@@ -1,0 +1,11 @@
+<!ELEMENT gvp (teaching+,non_teaching+,student+)>
+<!ELEMENT teaching (name,id,dept)>
+<!ATTLIST teaching clg CDATA #REQUIRED>
+<!ELEMENT non_teaching (name,id)>
+<!ATTLIST non_teaching clg CDATA #REQUIRED>
+<!ELEMENT student (name,rollno,dept)>
+<!ATTLIST student clg CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT rollno (#PCDATA)>
+<!ELEMENT dept (#PCDATA)>
